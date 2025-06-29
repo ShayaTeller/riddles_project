@@ -8,17 +8,24 @@ class Riddle{
         this.name = riddle.name;
         this.taskDescription = riddle.taskDescription;
         this.correctAnswer = riddle.correctAnswer;
-        this.answer = null;
+        this.answer;
 
 
     }
     
     ask(){
         const prompt = PromptSync();
+    if(this.answer !=this.correctAnswer){
+
         while(this.answer !=this.correctAnswer){
             this.answer = prompt(this.taskDescription)
+            continue;
+        }}
+        else{
+            console.log("good job!")   
+
         }
-        console.log("good job!")
+        
     }
     
 }   
